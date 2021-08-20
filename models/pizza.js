@@ -1,15 +1,19 @@
 //don't need the whole library only schema and model function
-const { Schema, model} = require('mongoose');
+const { Schema, model } = require('mongoose');
 const Pizza = require('./Pizza');
 const Comment = require('./Comment');
-const dateFomrat = require('../utils/dateformat');
+const dateFormat = require('../utils/dateFormat');
 
 const PizzaSchema = new Schema({
     pizzaName: {
-        type: String
+        type: String,
+        required: true,
+        trim: true
     },
     createdBy: {
-        type: String
+        type: String,
+        required: true,
+        trim: true
     },
     createdAt: {
         //if no input is put the date.now function will execute and provide timestamp
@@ -19,10 +23,12 @@ const PizzaSchema = new Schema({
     },
     size: {
         type: String,
+        required: true,
+        enum: ['Personal', 'Small', 'Medium', 'Large', 'Extra Large'],
         default: 'Large'
     },
     //empty bracket indicate array as data type
-    toppings:[],
+    toppings: [],
 
     comment: [
         {
@@ -30,23 +36,23 @@ const PizzaSchema = new Schema({
             ref: 'Comment'
         }
     ]
-    }, 
-        {
-    toJson: {
-        virtuals: true,
-        getters: true
-    },
-    id: false
+},
+    {
+        toJson: {
+            virtuals: true,
+            getters: true
+        },
+        id: false
     }
 );
 
 //get total cpunt of comment and replies on retrival
-PizzaSchema.virtual('commentCount').get(function(){
+PizzaSchema.virtual('commentCount').get(function () {
     return this.comments.reduce((total, comment) => total + comment.replace.length + 1, 0);
 });
 
 //create the pizza model using the pizzaSchema
-const pizza = model('Pizza', PizzaSchema);
+const Pizza = model('Pizza', PizzaSchema);
 
 //export the pizza model
 module.exports = Pizza;
