@@ -28,8 +28,9 @@ request.onerror = function (event) {
 function saveRecord(record) {
     // open a new transaction with the database with read and write permissions 
     const transaction = db.transaction(['new_pizza'], 'readwrite');
+    const pizzaObjectStore = transaction.objectStore('new_pizza');
     //add record to your store with add method
-    pizzaObjectStore.onupgradeneeded(record);
+    pizzaObjectStore.add(record);
 }
 
 function uploadPizza() {
