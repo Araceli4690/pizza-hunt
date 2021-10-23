@@ -1,7 +1,5 @@
 //don't need the whole library only schema and model function
 const { Schema, model } = require('mongoose');
-const Pizza = require('./Pizza');
-const Comment = require('./Comment');
 const dateFormat = require('../utils/dateFormat');
 
 const PizzaSchema = new Schema({
@@ -38,7 +36,7 @@ const PizzaSchema = new Schema({
     ]
 },
     {
-        toJson: {
+        toJSON: {
             virtuals: true,
             getters: true
         },
