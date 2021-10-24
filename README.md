@@ -20,7 +20,7 @@ Pizza-hunt is a social-media application that lets users connect with each other
 - CSS
 
 ## Getting-started
-To run the application clone the code and from the root of the project directory and run `npm i` to install the necessary node packages then run `npm i express` and `npm i mongoose1 to install the dependencies. After dependencies have been installed, from the root of the project directory run `node server.js` to launch the application.The application then can be opened on any browser at the localhost:3001 url.
+To run the application clone the code and from the root of the project directory and run `npm i` to install the necessary node packages then run `npm i express` and `npm i mongoose` to install the dependencies. After dependencies have been installed, from the root of the project directory run `node server.js` to launch the application.The application then can be opened on any browser at the localhost:3001 url.
 
 
 ## Deployed-app
