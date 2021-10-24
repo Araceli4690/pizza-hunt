@@ -27,6 +27,9 @@ To run the application clone the code and from the root of the project directory
 The app was deployed on [Heroku](https://www.heroku.com) using MongoDB Atlas for the apps database. To view the deployed app in action click on the following link
 https://pizza-hunt-1.herokuapp.com/
 
+- deployed app 
+
+![](./public/assets/images/Pizza-Hunt.gif)
 
 ## Contact
 If you have any questions feel free to contact me through my [Github](https://github.com/Araceli4690).
