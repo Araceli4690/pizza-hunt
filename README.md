@@ -1,4 +1,4 @@
-# Redux Shop-Shop
+# Pizza-hunt
 Pizza-hunt is an application that allows users to create share, and discuss their dream pizza-topping combinations.
 
 ## table of contents 
@@ -25,9 +25,8 @@ To run the application clone the code and from the root of the project directory
 
 ## Deployed-app
 The app was deployed on [Heroku](https://www.heroku.com) using MongoDB Atlas for the apps database. To view the deployed app in action click on the following link
-https://salty-plateau-17709.herokuapp.com/ 
+https://pizza-hunt-1.herokuapp.com/
 
-![](./client/public/shop-shop.png)
 
 ## Contact
 If you have any questions feel free to contact me through my [Github](https://github.com/Araceli4690).
